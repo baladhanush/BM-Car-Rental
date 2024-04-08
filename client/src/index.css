@@ -37,11 +37,15 @@ p{
 }
 .btn1{
   box-shadow: none !important;
-  background-color : white !important;
-  color: orangered !important;
+  background-color : white ;
+  color: orangered ;
   border: 1px solid orangered !important;
   padding: 5px 15px !important;
   outline: none !important;
+}
+.btn1:hover{
+  background-color: orangered;
+  color: white;
 }
 .bt1:focus{
   border: none;
@@ -55,11 +59,15 @@ button{
 }
 .header .ant-btn{
   box-shadow: none !important;
-  background-color : white !important;
-  color: orangered !important;
+  background-color : white ;
+  color: orangered ;
   border: 1px solid orangered !important;
   padding: 5px 15px !important;
   outline: none !important;
+}
+.header .ant-btn:hover{
+  background-color: orangered;
+  color: white;
 }
 .content{
   min-height: 90vh;
@@ -145,5 +153,5 @@ svg{
   width : 20px !important;
 }
 a{
-  color: orangered !important;
+  color: orangered ;
 }
