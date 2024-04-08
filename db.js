@@ -1,18 +1,22 @@
 const mongoose = require("mongoose");
-const { mongoURI } = require('./config');
 
 function connectDB(){
-    mongoose.connect(mongoURI, { useUnifiedTopology: true, useNewUrlParser: true });
 
-    const connection = mongoose.connection;
+    mongoose.connect('mongodb+srv://baladhanush1911:bala1900@balame.6zn3pp4.mongodb.net/BMCars' , {useUnifiedTopology: true , useNewUrlParser: true})
 
-    connection.on('connected', () => {
-        console.log('Mongo DB Connection Successful');
-    });
+    const connection = mongoose.connection
 
-    connection.on('error', (err) => {
-        console.error('Mongo DB Connection Error:', err);
-    });
+    connection.on('connected' , ()=>{
+        console.log('Mongo DB Connection Successfull')
+    })
+
+    connection.on('error' , ()=>{
+        console.log('Mongo DB Connection Error')
+    })
+
+
 }
 
-module.exports = connectDB;
+connectDB()
+
+module.exports = mongoose
